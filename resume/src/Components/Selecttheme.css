@@ -1,0 +1,124 @@
+
+.theme-header{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 50px;
+    color: var(--light);
+}
+
+.theme-main{
+    margin: 0px 10vw 0;
+    border: 1px solid var(--light);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 20px;
+}
+
+.theme-main>div>img{
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.theme-main>div{
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+.theme-main-msg{
+    grid-column: 1/4;
+    color: var(--light);
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.card-selected{
+    border: 2px solid var(--light);
+}
+
+.btn-div{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0 50px;
+}
+
+.btn{
+    cursor: pointer;
+    background-color: white;
+    color: var(--light);
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 7px;
+    border: 2px solid var(--light);
+}
+.btn:hover{
+    background-color: var(--light);
+    color: white;
+}
+
+.clr-select{
+    margin: 0px 10vw 0;
+    border: 1px solid var(--light);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.clr-select>div>div{
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 4px ;
+}
+
+.theme-err{
+    color: red;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (min-width:500px) {
+    .theme-main>div>img:hover{
+        transform: perspective(3000px) rotateY(20deg);
+    }
+}
+
+@media screen and (max-width:750px){
+    .theme-main{
+        grid-template-columns: 1fr;
+    }
+    .theme-main-msg{
+        grid-column: auto;
+    }
+    .clr-select>div>div{
+        width: 4vw;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .clr-select{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40px,1fr));
+        justify-items: center;
+    }
+    .clr-select>div>div{
+        width: 40px;
+    }
+    .theme-main>div>img:active{
+        transform: skew(2deg, 2deg);
+
+    }
+    
+}
